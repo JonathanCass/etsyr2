@@ -1,0 +1,1 @@
+Refactor Etsy with react and redux.
