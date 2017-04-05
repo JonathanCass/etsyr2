@@ -26,7 +26,7 @@ export default React.createClass({
       <div>
         <ul>
           {this.state.data.map(data=>(
-            <li key={data.listing_id}>{data.title}</li>
+            <li key={data.listing_id}>{data.price}</li>
           ))}
         </ul>
       </div>

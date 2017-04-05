@@ -1,11 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Etsy Refactor</title>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+	<meta charset="UTF-8">  
+	<link rel="stylesheet" href="style.css"/>
+	<title>My Etsy Page</title>
+</head>
+<body>
+	<div id="header">
+		<div id="headerLeft">
+			<a href="https://www.etsy.com/?ref=lgo"><span id="Etsy">Etsy</span></a>
+			<div id="searchBar">
+				<input type="text" id=searchInput /><a href="https://www.etsy.com/?ref=lgo" id="searchButtonLink"><button type="button" id="searchButton">Search</button></a>
+			</div>
+		</div>
+		<div id="headerRight">
+				<span class="headerText">Sell on Etsy</span>
+				<span class="headerText">Register</span>
+				<button type ="button" id="headerButton">Sign in</button>
+				<button type ="button" id="cart"></button><span id ="cartText">Cart</span>
+		</div>
+	</div>
+	<div id="categories">
+		<span id="CandA">Clothing &amp; Accessories</span>
+		<span id="jewelry">Jewelry</span>
+		<span id="CSandT">Craft Supplies &amp; Tools</span>
+		<span id="weddings">Weddings</span>
+		<span id="entertainment">Entertainment</span>
+		<span id="HandL">Home &amp; Living</span>
+		<span id="K&B">Kids &amp; Baby</span>
+		<span id="vintage">Vintage</span>
+	</div>
+	<div id="sidebar">
+		<ul id="allCat">All categories
+			<li><a href="">Home &amp; Living</a></li>
+			<li><a href="">Art &amp; Collectibles</a></li>
+			<li><a href="">Weddings</a></li>
+			<li><a href="">Clothing</a></li>
+			<li><a href="">Paper &amp; Party Supplies</a></li>
+			<li><a href="">Jewelry</a></li>
+			<li><a href="">Craft Supplies &amp; Tools</a></li>
+			<li><a href="">Accessories</a></li>
+			<li><a href="">Bags &amp; Purses</a></li>
+			<li><a href="">Bath &amp; Purses</a></li>
+			<li><a href="">Books, Movies &amp; Music</a></li>
+			<li><a href="">Shoes</a></li>
+			<li><a href="">Electronics &amp; Accessories</a></li>
+			<li><a href="">Toys &amp; Games</a></li>
+			<li><a href="">Pet Supplies</a></li>
+			<li id="listBorder"></li>
+		</ul>
+		<ul id="shopLocation">Shop Location
+			<li><input name="shopLocation" type="radio" checked>Anywhere</li>
+			<li><input name="shopLocation" type="radio">United States</li>
+			<li><input name="shopLocation" type="radio">Custom</li>
+			<li><input type="text" id="customLocation" placeholder="Enter Location"><button type="button" id="locEnter"></button></li>
+			<li id="listBorder"></li>
+		</ul>
+		<ul id="itemType">Item type
+			<li><input name ="itemType" type="radio" checked>All items</li>
+			<li><input name ="itemType" type="radio">Handmade</li>
+			<li><input name ="itemType" type="radio">Vintage</li>
+			<li id="listBorder"></li>
+		</ul>
+		<ul id="price">Price ($)
+			<li><input name ="price" type="radio" checked>Any price</li>
+			<li><input name ="price" type="radio">Under $25</li>
+			<li><input name ="price" type="radio">$25 to $50</li>
+			<li><input name ="price" type="radio">$50 to $100</li>
+			<li><input name ="price" type="radio">Over $100</li>
+			<li><input name ="price" type="radio">Custom</li>
+			<li><input type="text" id="low" placeholder="Low"><span id="toSpan"> to </span><input type="text" id="high" placeholder="High"><button type="button" id="locEnter"></button></li>
+			<li id="listBorder"></li>
+		</ul>
+		<ul id="colors">Filter by color<br>
+			<li id="redB" class="colorBox"></li>
+			<li id="orangeB" class="colorBox"></li>
+			<li id="yellowB" class="colorBox"></li>
+			<li id="greenB" class="colorBox"></li>
+			<li id="blueB" class="colorBox"></li>
+			<li id="purpleB" class="colorBox"></li>
+			<li id="blackB" class="colorBox"></li>
+			<li id="whiteB" class="colorBox"></li>
+			<li id="listBorder"></li>
+			</ul>
+		<ul id="orderOptions">Ordering options
+			<li><input type="checkbox">Accepts Etsy gift cards</li>
+			<li><input type="checkbox">Customizable</li>
+			<li id="listBorder"></li>
+		</ul>
+		<ul id="shipTo">Ship to
+			<li><select>
+				<option value="usa">United States</option>
+				</select>
+			</li>
+		</ul>
+	</div>
+	
+	<div id="imageBlock">
+			<div id="imageBlockHeader"><span>All categories > </span><span> Sort by: Relevancy</span></div>
+			<div id="root"></div>
+	</div>
+</body>
 </html>
