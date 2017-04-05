@@ -2,6 +2,10 @@ import React from 'react'
 import store from '../store'
 import {getData} from '../api/data'
 
+const styles = {
+
+}
+
 export default React.createClass({
   getInitialState() {
     return {
@@ -24,11 +28,21 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <ul>
+        <div>
           {this.state.data.map(data=>(
-            <li key={data.listing_id}>{data.price}</li>
+            <div style={styles.itemBox}>
+              <div img src={data.Images.url_570xN} style={styles.imageBox}/>
+              <div style={styles.infoBox}>
+                <span style={styles.itemTitle}>{data.title}</span>
+                <div styles={styles.storePriceBox}>
+                  <span styles={styles.store}>{data.state}</span>
+                  <span styles={styles.price}>{data.price}</span>
+                </div>  
+              </div>
+            </div>
+            //<li key={data.listing_id}>{data.price}</li>
           ))}
-        </ul>
+        </div>
       </div>
     )
   }
