@@ -225,10 +225,6 @@ select{
 	margin-bottom: 10px;
 	margin-right: 30px;
 }
-#itemFence{
-	display: flex;
-	flex-wrap: wrap;
-}
 .itemBox{
 	width: 264px;
 	height: 262px;
@@ -300,6 +296,9 @@ select{
 }
 .showMe{
 	visibility: visible;
+}
+.makeHover:hover{
+	cursor: pointer;
 }
 
 

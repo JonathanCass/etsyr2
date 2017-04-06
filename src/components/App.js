@@ -4,9 +4,9 @@ import {getData} from '../api/data'
 
 const styles = {
   itemFence:{
-    width: 1440,
     display: 'flex',
-    flexWrap:'wrap'
+    flexWrap:'wrap',
+    margin: 0
   },
   itemBox : {
     width: 264,
@@ -57,9 +57,9 @@ export default React.createClass({
   },
   render() {
     return (
-        <div styles={styles.itemFence}>
+        <div style={styles.itemFence}>
           {this.state.data.map(data=>(
-            <div style={styles.itemBox} key={data.listing_id}>
+            <div className='makeHover' style={styles.itemBox} key={data.listing_id}>
               <img src={data.Images[0].url_570xN} style={styles.image} alt={data.listing_id}/>
               <div className='imageLabel'>
                 <span className='title'>{data.title}</span>
